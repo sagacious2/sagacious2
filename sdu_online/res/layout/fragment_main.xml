@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context="com.sagacious.sdu_online.MainActivity$PlaceholderFragment" >
+    
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="40.0dip"
+        android:background="#fff3f3f3"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rl_column"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dip"
+            android:layout_weight="1.0" >
+
+            <com.sagacious.sdu_online.view.ColumnHorizontalScrollView
+                android:id="@+id/mColumnHorizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="40.0dip"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:id="@+id/mRadioGroup_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip" />
+            </com.sagacious.sdu_online.view.ColumnHorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/shade_left"
+                android:layout_width="10.0dip"
+                android:layout_height="40.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/channel_leftblock"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/shade_right"
+                android:layout_width="10.0dip"
+                android:layout_height="40.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/channel_rightblock"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_more_columns"
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip" >
+
+            <ImageView
+                android:id="@+id/button_more_columns"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/channel_glide_day_bg" />
+        </LinearLayout>
+    </LinearLayout>
+
+	<FrameLayout 
+    	android:id="@+id/item"
+    	android:layout_below="@+id/title"
+    	android:layout_above="@+id/button1"
+    	android:layout_width="fill_parent"
+    	android:layout_height="match_parent">
+	</FrameLayout>
+    
+    
+		
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="资讯" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_toRightOf="@+id/button1"
+        android:text="图视" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_toRightOf="@+id/button2"
+        android:text="原创" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button3"
+        android:layout_alignBottom="@+id/button3"
+        android:layout_toRightOf="@+id/button3"
+        android:text="其他" />
+
+</RelativeLayout>
